@@ -1,0 +1,78 @@
+.socials {
+  @include flex() {
+    flex-direction: column;
+  };
+  @include laptop() {
+    flex-direction: row
+  };
+
+  .one .title, .one .images, .list, .two {
+    margin-bottom: 3rem;
+    @include laptop() {
+      margin-bottom: 0;
+    };
+  }
+
+  .one {
+    @include laptop() {
+      @include size(25%, 100%);
+    };
+
+    .title {
+      margin-bottom: 2rem;
+    }
+    
+    .images {
+  
+      .image {
+        margin: 0 .5rem;
+      }
+    }
+  }
+
+
+  .list {
+    text-align: center;
+    @include laptop() {
+      text-align: left;
+      @include size(50%, 100%);
+      @include flex() {
+        flex-wrap: wrap;
+      };
+    };
+
+    .item {
+      margin-bottom: 1rem;
+      @include laptop() {
+        width: 50%;
+        margin: 1rem 0;
+      };
+
+      .link {
+        font-size: 1.5rem;
+
+        &:hover {
+          color: $lime-green;
+        }
+      }
+    }
+  }
+
+  .two {
+    @include flex() {
+      flex-direction: column
+    };
+    @include laptop() {
+      align-items: flex-end;
+      @include size(25%, 100%);
+    };
+
+    .btn {
+      margin-bottom: 2rem;
+    }
+    
+    .copy-right {
+      font-size: 1.5rem;
+    }
+  }
+}

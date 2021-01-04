@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap');
+
+// TOOLS
+@import './tools/var';
+@import './tools/mixins';
+
+// BASE
+@import './base/base';
+
+// LAYOUTS
+@import './layouts/header';
+@import './layouts/main';
+@import './layouts/section';
+@import './layouts/article';
+@import './layouts/footer';
+
+// COMPONENTS
+@import './components/navigation';
+@import './components/hero';
+@import './components/why';
+@import './components/figures';
+@import './components/socials';

@@ -1,0 +1,52 @@
+.why {
+  text-align: center;
+  @include flex() {
+    flex-direction: column;
+  };
+  @include laptop() {
+    flex-direction: row;
+    flex-wrap: wrap;
+  };
+
+  .easybank {
+    margin: 5rem 0;
+    @include laptop() {
+      text-align: left;
+      width: 100%;
+    };
+
+    .text {
+      @include laptop() {
+        width: 50%;
+        font-size: 1.5rem;
+        line-height: 2rem;
+      };
+    }
+  }
+
+  .content {
+    margin-bottom: 4rem;
+    @include laptop() {
+      width: 25%;
+      margin-bottom: 0;
+      text-align: left;
+      padding: 0 1rem;
+    };
+
+    .image {
+      margin-bottom: 2rem;
+    }
+
+    .subtitle {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .text {
+      @include laptop() {
+        font-size: 1.5rem;
+        line-height: 2rem;
+      };
+    }
+  }
+}

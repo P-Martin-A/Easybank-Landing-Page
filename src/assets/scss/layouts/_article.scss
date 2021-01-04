@@ -1,0 +1,6 @@
+.article {
+  grid-area: article;
+  @include laptop() {
+    @include size(100%, 100vh);
+  };
+}

@@ -1,0 +1,77 @@
+.hero {
+  @include laptop() {
+    @include size(100%, 100vh);
+    @include flex() {
+      flex-direction: row-reverse
+    };
+  };
+
+  .images {
+    position: relative;
+    @include size(100%, 50rem);
+    @include laptop() {
+      @include size(50%, 100%);
+    };
+    
+    .device, .bg-device {
+      position: absolute;
+      top: 0;
+      object-fit: cover;
+      @include size();
+    }
+    
+    .device {
+      @include laptop() {
+        padding: 0;
+        height: 75rem;
+      };
+    }
+
+    .bg-device {
+      z-index: $z-index-low;
+      padding-top: 6rem;
+      @include laptop() {
+        padding-top: 0;
+      };
+
+      &.mobile {
+        display: inline-block;
+        @include laptop() {
+          display: none; 
+        };
+      }
+
+      &.desktop {
+        display: none;
+        @include laptop() {
+          display: inline-block; 
+          width: 100rem;
+          top: -10rem;
+          left: -15rem;
+        };
+      }
+    }
+  }
+
+  .content {
+    text-align: center;
+    @include laptop() {
+      text-align: left;
+      @include size(50%, auto);
+    };
+
+    .title {
+      @include laptop() {
+        font-size: 6rem;
+      };
+    }
+
+    .text {
+      margin-bottom: 2rem;
+      @include laptop() {
+        font-size: 2rem;
+      };
+    }
+
+  }
+}

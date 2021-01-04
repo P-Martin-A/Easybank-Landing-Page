@@ -1,4 +1,6 @@
-# easybank-landing-page
+# Easybank landing page
+
+![Design preview for the Easybank landing page coding challenge](./src/assets/design/desktop-preview.jpg)
 
 ## Project setup
 ```

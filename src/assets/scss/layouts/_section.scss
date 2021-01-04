@@ -1,0 +1,7 @@
+.section {
+  grid-area: section;
+  background-color: $very-light-gray;
+  @include laptop() {
+    @include size(100%, 100vh);
+  };
+}

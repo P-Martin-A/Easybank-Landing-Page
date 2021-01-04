@@ -1,0 +1,14 @@
+.header {
+  background-color: $white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: $z-index-High;
+  @include flex(center, space-between);
+  @include laptop() {
+    position: initial;
+    box-shadow: 0 .5rem 1rem $light-grayish-blue;
+    @include size(100vw, 100%);
+  };
+}

@@ -1,0 +1,85 @@
+.navigation {
+  @include laptop() {
+    @include size(65%, auto);
+    @include flex(center, space-between);
+  };
+
+  .image {
+    cursor: pointer;
+    
+    &.menu, &.close {
+      
+      &.active {
+        display: inline-block;
+        @include laptop() {
+          display: none;
+        };
+      }
+      
+      &.inactive {
+        display: none;
+      }
+    }
+  }
+
+  .list {
+    display: none;
+    @include laptop() {
+      display: flex;
+    };
+    
+    &.active {
+      position: absolute;
+      display: inline-block;
+      top: 10rem;
+      left: 2rem;
+      width: 90%;
+      text-align: center;
+      border-radius: 1rem;
+      background: $white;
+      box-shadow: 0 0 5rem $dark-blue;
+      
+      .item {
+        margin: 2rem 0;
+        
+        .link {
+          font-size: 1.5rem;
+          color: $dark-blue;
+        }
+      }
+    }
+
+    .item {
+      @include laptop() {
+        margin: 0 1rem;
+      };
+
+      .link {
+        position: relative;
+        font-size: 1.5rem;
+        color: $grayish-blue;
+        
+        
+        &:hover {
+          color: $dark-blue;
+          &::after {
+            content: '';
+            position: absolute;
+            height: .5rem;
+            bottom: -3.5rem;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to right, $lime-green, $bright-cyan);
+          }
+        }
+      }
+    }
+  }
+
+  .btn {
+    display: none;
+    @include laptop() {
+      display: inline-block;
+    };
+  }
+}

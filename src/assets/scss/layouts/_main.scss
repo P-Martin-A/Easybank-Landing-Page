@@ -1,0 +1,6 @@
+.main {
+  grid-area: main;
+  @include laptop() {
+    @include size(100%, 100vh);
+  };
+}
